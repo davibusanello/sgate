@@ -3,7 +3,7 @@ class CreatePacotes < ActiveRecord::Migration
     create_table :pacotes do |t|
       t.string :nome
       t.string :descricao
-      t.numeric :valor
+      t.decimal :valor
 
       t.timestamps
     end
