@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :Clientes %><br />
-    <%= f.text_field :Cliente, :cliente_id %>
+    <%= f.select :cliente_id, @clientes.collect { |c| [c.nome, c.id] }, { :prompt => 'Escolha o cliente' } %>
   </div>
   <div class="field">
     <%= f.label :Pacotes %><br />
-    <%= f.text_field :Pacote, :pacote_id %>
+    <%= f.select :pacote_id, @pacotes.collect { |c| [c.nome, c.id] }, { :prompt => 'Escolha o pacote' } %>
   </div>
   <div class="field">
     <%= f.label :Vendedors %><br />
-    <%= f.text_field :Vendedor, :vendedor_id %>
+    <%= f.select :vendedor_id, @vendedores.collect { |c| [c.nome, c.id] }, { :prompt => 'Escolha o vendedor' } %>
   </div>
   <div class="field">
     <%= f.label :data %><br />

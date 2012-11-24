@@ -25,9 +25,9 @@ class VendasController < ApplicationController
   # GET /vendas/new.json
   def new
     @venda = Venda.new
-    @Clientes = Cliente.all
-    @Pacotes = Pacote.all
-    @Vendedors = Vendedor.all
+    @clientes = Cliente.all
+    @pacotes = Pacote.all
+    @vendedores = Vendedor.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,9 +44,9 @@ class VendasController < ApplicationController
   # POST /vendas.json
   def create
     @venda = Venda.new(params[:venda])
-    @Clientes = Cliente.all
-    @Pacotes = Pacote.all
-    @Vendedors = Vendedor.all
+    @clientes = Cliente.all
+    @pacotes = Pacote.all
+    @vendedores = Vendedor.all
 
     respond_to do |format|
       if @venda.save
