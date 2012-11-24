@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data agendada:</b>
+  <%= @agenda.data_agendada %>
+</p>
+
+<p>
+  <b>Data realizada:</b>
+  <%= @agenda.data_realizada %>
+</p>
+
+<p>
+  <b>Vendedor:</b>
+  <%= @agenda.vendedor_id %>
+</p>
+
+<p>
+  <b>Instalador:</b>
+  <%= @agenda.instalador_id %>
+</p>
+
+<p>
+  <b>Pacote:</b>
+  <%= @agenda.pacote_id %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @agenda.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_agenda_path(@agenda) %> |
+<%= link_to 'Back', agendas_path %>
