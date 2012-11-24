@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cliente: 
+  pacote: 
+  vendedor: 
+  data: 2012-11-24
+  observacao: MyText
+
+two:
+  cliente: 
+  pacote: 
+  vendedor: 
+  data: 2012-11-24
+  observacao: MyText

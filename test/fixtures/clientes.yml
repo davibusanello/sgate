@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  numero_inscricao: MyString
+  nome: MyString
+  data_nascimento: 2012-11-24
+  sexo: MyString
+  cpf_cnpj: MyString
+  endereco: MyString
+  telefone: MyString
+
+two:
+  numero_inscricao: MyString
+  nome: MyString
+  data_nascimento: 2012-11-24
+  sexo: MyString
+  cpf_cnpj: MyString
+  endereco: MyString
+  telefone: MyString

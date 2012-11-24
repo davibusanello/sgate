@@ -1,0 +1,25 @@
+<h1>Listing vendedors</h1>
+
+<table>
+  <tr>
+    <th>Registro</th>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vendedors.each do |vendedor| %>
+  <tr>
+    <td><%= vendedor.registro %></td>
+    <td><%= vendedor.nome %></td>
+    <td><%= link_to 'Show', vendedor %></td>
+    <td><%= link_to 'Edit', edit_vendedor_path(vendedor) %></td>
+    <td><%= link_to 'Destroy', vendedor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vendedor', new_vendedor_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@pacote) do |f| %>
+  <% if @pacote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pacote.errors.count, "error") %> prohibited this pacote from being saved:</h2>
+
+      <ul>
+      <% @pacote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
