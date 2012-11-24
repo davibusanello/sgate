@@ -5,5 +5,6 @@ class Venda < ActiveRecord::Base
   # belongs_to :Pacotes
   # belongs_to :Vendedors
   attr_accessible :cliente, :cliente_id, :pacote, :pacote_id, :vendedor, :vendedor_id, :data, :observacao
+  validates_presence_of :cliente_id
 
 end

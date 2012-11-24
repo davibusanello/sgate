@@ -7,8 +7,17 @@ class VendaTest < ActiveSupport::TestCase
 
   test "cliente should not blank" do
     venda = Venda.new
-    assert !venda.cliente.blank?, "Saved the venda without cliente"
+    assert !venda.save, "Saved the venda without cliente"
   end
 
+  test "pacote should not blank" do
+    venda = Venda.new
+    assert !venda.save, "Saved the venda without pacote"
+  end
+
+  test "vendedor should not blank" do
+    venda = Venda.new
+    assert !venda.save, "Saved the venda without vendedor"
+  end
 
 end
