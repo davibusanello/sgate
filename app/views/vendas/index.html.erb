@@ -14,9 +14,9 @@
 
 <% @vendas.each do |venda| %>
   <tr>
-    <td><%= venda.Clientes %></td>
-    <td><%= venda.Pacotes %></td>
-    <td><%= venda.Vendedors %></td>
+    <td><%= venda.cliente.nome %></td>
+    <td><%= venda.Pacotes_id %></td>
+    <td><%= venda.Vendedors_id %></td>
     <td><%= venda.data %></td>
     <td><%= venda.observacao %></td>
     <td><%= link_to 'Show', venda %></td>
