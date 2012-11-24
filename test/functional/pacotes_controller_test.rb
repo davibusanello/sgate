@@ -18,7 +18,7 @@ class PacotesControllerTest < ActionController::TestCase
 
   test "should create pacote" do
     assert_difference('Pacote.count') do
-      post :create, pacote: { descricao: @pacote.descricao, nome: @pacote.nome, valor: @pacote.valor }
+      post :create, pacote: {  }
     end
 
     assert_redirected_to pacote_path(assigns(:pacote))
@@ -35,7 +35,7 @@ class PacotesControllerTest < ActionController::TestCase
   end
 
   test "should update pacote" do
-    put :update, id: @pacote, pacote: { descricao: @pacote.descricao, nome: @pacote.nome, valor: @pacote.valor }
+    put :update, id: @pacote, pacote: {  }
     assert_redirected_to pacote_path(assigns(:pacote))
   end
 

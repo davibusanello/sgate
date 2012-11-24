@@ -18,7 +18,7 @@ class VendasControllerTest < ActionController::TestCase
 
   test "should create venda" do
     assert_difference('Venda.count') do
-      post :create, venda: { cliente: @venda.cliente, data: @venda.data, observacao: @venda.observacao, pacote: @venda.pacote, vendedor: @venda.vendedor }
+      post :create, venda: {  }
     end
 
     assert_redirected_to venda_path(assigns(:venda))
@@ -35,7 +35,7 @@ class VendasControllerTest < ActionController::TestCase
   end
 
   test "should update venda" do
-    put :update, id: @venda, venda: { cliente: @venda.cliente, data: @venda.data, observacao: @venda.observacao, pacote: @venda.pacote, vendedor: @venda.vendedor }
+    put :update, id: @venda, venda: {  }
     assert_redirected_to venda_path(assigns(:venda))
   end
 

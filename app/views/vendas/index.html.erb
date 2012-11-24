@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <th>Cliente</th>
-    <th>Pacote</th>
-    <th>Vendedor</th>
+    <th>Clientes</th>
+    <th>Pacotes</th>
+    <th>Vendedors</th>
     <th>Data</th>
     <th>Observacao</th>
     <th></th>
@@ -14,9 +14,9 @@
 
 <% @vendas.each do |venda| %>
   <tr>
-    <td><%= venda.cliente %></td>
-    <td><%= venda.pacote %></td>
-    <td><%= venda.vendedor %></td>
+    <td><%= venda.Clientes %></td>
+    <td><%= venda.Pacotes %></td>
+    <td><%= venda.Vendedors %></td>
     <td><%= venda.data %></td>
     <td><%= venda.observacao %></td>
     <td><%= link_to 'Show', venda %></td>
