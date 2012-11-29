@@ -12,7 +12,6 @@ def setup
   	@agenda.descricao = 'Teste'
   	@agenda.instalador_id = 1
   	@agenda.pacote_id = 1
-  	@agenda.vendedor_id = 1
   	@agenda.cliente_id = 1
 end
 
@@ -26,9 +25,9 @@ test "Agenda sem pacote_id" do
   	assert !@agenda.save, "Agenda sem pacote_id"
 end
 
-test "Agenda sem vendedor_id" do
-  	@agenda.vendedor_id = nil
-  	assert !@agenda.save, "Agenda sem vendedor_id"
+test "Agenda sem instalador_id" do
+  	@agenda.instalador_id = nil
+  	assert !@agenda.save, "Agenda sem instalador_id"
 end
 
 test "Agenda sem cliente_id" do
