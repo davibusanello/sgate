@@ -26,7 +26,7 @@ class AgendasController < ApplicationController
   def new
     @agenda = Agenda.new
     @clientes = Cliente.all
-    # @instaladores = Instalador.all
+    @instaladores = Instalador.all
     @pacotes = Pacote.all
 
     respond_to do |format|
