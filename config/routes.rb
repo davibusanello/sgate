@@ -1,4 +1,6 @@
 Sgate::Application.routes.draw do
+  root :to => 'vendas#new'
+
   resources :vendas
 
 

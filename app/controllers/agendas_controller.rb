@@ -25,6 +25,9 @@ class AgendasController < ApplicationController
   # GET /agendas/new.json
   def new
     @agenda = Agenda.new
+    @clientes = Cliente.all
+    # @instaladores = Instalador.all
+    @pacotes = Pacote.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +44,9 @@ class AgendasController < ApplicationController
   # POST /agendas.json
   def create
     @agenda = Agenda.new(params[:agenda])
+    @clientes = Cliente.all
+    @instaladores = Instalador.all
+    @pacotes = Pacote.all
 
     respond_to do |format|
       if @agenda.save

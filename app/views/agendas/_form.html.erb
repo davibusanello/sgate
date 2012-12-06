@@ -21,15 +21,15 @@
   </div>
   <div class="field">
     <%= f.label :cliente_id %><br />
-    <%= f.number_field :cliente_id %>
+    <%= f.select :cliente_id, @clientes.collect { |c| [c.nome, c.id] }, { :prompt => 'Escolha o cliente' } %>
   </div>
   <div class="field">
     <%= f.label :instalador_id %><br />
-    <%= f.number_field :instalador_id %>
+    <%= f.select :instalador_id, @instaladores.collect { |c| [c.nome, c.id] }, { :prompt => 'Escolha o instalador' } %>
   </div>
   <div class="field">
     <%= f.label :pacote_id %><br />
-    <%= f.number_field :pacote_id %>
+    <%= f.select :pacote_id, @pacotes.collect { |c| [c.nome, c.id] }, { :prompt => 'Escolha o pacote' } %>
   </div>
   <div class="field">
     <%= f.label :descricao %><br />
