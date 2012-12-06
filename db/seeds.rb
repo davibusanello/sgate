@@ -17,3 +17,5 @@ vendedores = Vendedor.create([{nome: 'Augusto', registro: 'a1'},
 clientes = Cliente.create([{cpf_cnpj: '9999999-99', data_nascimento: '12/12/1978', endereco: 'Rua das Pitangas, 66, Bairro Jaragua', nome: 'Jose da Silva', numero_inscricao: '12345', sexo: 'M', telefone: '33322456'},
 							{cpf_cnpj: '8888888-88', data_nascimento: '25/08/1960', endereco: 'Avenida Amazonas, 567, Prado', nome: 'Milena Alves', numero_inscricao: '98765', sexo: 'F', telefone: '33339867'},
 							{cpf_cnpj: '7777777-77', data_nascimento: '08/08/1970', endereco: 'Rua Direita, 1000, Centro', nome: 'Joao Pereira', numero_inscricao: '6666', sexo: 'M', telefone: '98700000'}])
+
+instaladores = Instalador.create({nome: 'Joao teste', registro: '12345'})
