@@ -38,6 +38,9 @@ class AgendasController < ApplicationController
   # GET /agendas/1/edit
   def edit
     @agenda = Agenda.find(params[:id])
+    @clientes = Cliente.all
+    @instaladores = Instalador.all
+    @pacotes = Pacote.all
   end
 
   # POST /agendas
@@ -63,6 +66,9 @@ class AgendasController < ApplicationController
   # PUT /agendas/1.json
   def update
     @agenda = Agenda.find(params[:id])
+    @clientes = Cliente.all
+    @instaladores = Instalador.all
+    @pacotes = Pacote.all
 
     respond_to do |format|
       if @agenda.update_attributes(params[:agenda])
@@ -85,5 +91,15 @@ class AgendasController < ApplicationController
       format.html { redirect_to agendas_url }
       format.json { head :no_content }
     end
+  end
+
+  def lista_tecnico
+    @agendas = Agenda.where(status: 1)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @agendas }
+    end
+    
   end
 end

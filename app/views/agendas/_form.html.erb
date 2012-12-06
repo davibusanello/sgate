@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :status %><br />
-    <%= select(:agenda,:status, options_for_select([['Aberto',1], ['Andamento',2], ['Concluido',3]])) %>
+    <%= f.select(:status, options_for_select([['Aberto',1], ['Andamento',2], ['Concluido',3]])) %>
   </div>
   <div class="actions">
     <%= f.submit %>

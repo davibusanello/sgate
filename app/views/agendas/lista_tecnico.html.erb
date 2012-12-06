@@ -1,4 +1,4 @@
-<h1>Listing agendas</h1>
+<h1>Chamados em aberto</h1>
 
 <table>
   <tr>
@@ -8,9 +8,7 @@
     <th>Instalador</th>
     <th>Pacote</th>
     <th>Descricao</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Detalhes</th>
   </tr>
 
 <% @agendas.each do |agenda| %>
@@ -21,13 +19,9 @@
     <td><%= agenda.Instalador.nome %></td>
     <td><%= agenda.Pacote.nome %></td>
     <td><%= agenda.descricao %></td>
-    <td><%= link_to 'Show', agenda %></td>
-    <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
-    <td><%= link_to 'Destroy', agenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', agenda %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Agenda', new_agenda_path %>
