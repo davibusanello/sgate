@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @fatura.cliente_id %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @fatura.nome %>
+</p>
+
+<p>
+  <b>Numero inscricao:</b>
+  <%= @fatura.numero_inscricao %>
+</p>
+
+<p>
+  <b>Data vencimento:</b>
+  <%= @fatura.data_vencimento %>
+</p>
+
+<p>
+  <b>Pacote:</b>
+  <%= @fatura.pacote_id %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @fatura.valor %>
+</p>
+
+
+<%= link_to 'Edit', edit_fatura_path(@fatura) %> |
+<%= link_to 'Back', faturas_path %>

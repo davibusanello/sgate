@@ -1,4 +1,7 @@
 Sgate::Application.routes.draw do
+  resources :faturas
+
+
   resources :instaladors
 
 
