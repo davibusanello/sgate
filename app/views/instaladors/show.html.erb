@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @instalador.nome %>
+</p>
+
+<p>
+  <b>Registro:</b>
+  <%= @instalador.registro %>
+</p>
+
+
+<%= link_to 'Edit', edit_instalador_path(@instalador) %> |
+<%= link_to 'Back', instaladors_path %>

@@ -1,0 +1,25 @@
+<h1>Listing instaladors</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Registro</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instaladors.each do |instalador| %>
+  <tr>
+    <td><%= instalador.nome %></td>
+    <td><%= instalador.registro %></td>
+    <td><%= link_to 'Show', instalador %></td>
+    <td><%= link_to 'Edit', edit_instalador_path(instalador) %></td>
+    <td><%= link_to 'Destroy', instalador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Instalador', new_instalador_path %>

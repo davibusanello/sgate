@@ -1,4 +1,7 @@
 Sgate::Application.routes.draw do
+  resources :instaladors
+
+
   root :to => 'vendas#new'
 
   resources :vendas
