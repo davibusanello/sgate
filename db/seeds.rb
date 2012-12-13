@@ -6,6 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Pacote.destroy_all
+Vendedor.destroy_all
+Cliente.destroy_all
+Instalador.destroy_all
+Fatura.destroy_all
+
 pacotes = Pacote.create([{descricao: 'Pacote somente com internet', nome: 'pacote internet', valor: 50.0},
 						{descricao: 'Pacote somente com TV a cabo', nome: 'pacote tv a cabo', valor: 50.0},
 						{descricao: 'Pacote com internet e TV a cabo', nome: 'pacote combo', valor: 90.0}])
