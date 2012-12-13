@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121206225009) do
+ActiveRecord::Schema.define(:version => 20121206234445) do
 
   create_table "agendas", :force => true do |t|
     t.date     "data_agendada"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(:version => 20121206225009) do
     t.string   "cpf_cnpj"
     t.string   "endereco"
     t.string   "telefone"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "faturas", :force => true do |t|
+    t.integer  "cliente_id"
+    t.string   "nome"
+    t.string   "numero_inscricao"
+    t.date     "data_vencimento"
+    t.integer  "pacote_id"
+    t.decimal  "valor"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

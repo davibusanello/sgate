@@ -19,3 +19,7 @@ clientes = Cliente.create([{cpf_cnpj: '9999999-99', data_nascimento: '12/12/1978
 							{cpf_cnpj: '7777777-77', data_nascimento: '08/08/1970', endereco: 'Rua Direita, 1000, Centro', nome: 'Joao Pereira', numero_inscricao: '6666', sexo: 'M', telefone: '98700000'}])
 
 instaladores = Instalador.create({nome: 'Joao teste', registro: '12345'})
+
+faturas = Fatura.create([{cliente_id: 1, nome: 'Jose da Silva', numero_inscricao: '12345', data_vencimento: '14/12/2012', pacote_id: 1, valor: 50.00},
+						{cliente_id: 2, nome: 'JMilena Alves', numero_inscricao: '98765', data_vencimento: '14/12/2012', pacote_id: 2, valor: 50.00},
+						{cliente_id: 3, nome: 'Joao Pereira', numero_inscricao: '6666', data_vencimento: '14/12/2012', pacote_id: 3, valor: 90.00}])
