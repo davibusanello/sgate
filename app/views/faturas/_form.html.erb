@@ -13,15 +13,7 @@
 
   <div class="field">
     <%= f.label :cliente_id %><br />
-    <%= f.number_field :cliente_id %>
-  </div>
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :numero_inscricao %><br />
-    <%= f.text_field :numero_inscricao %>
+    <%= f.select :cliente_id, @clientes.collect { |c| ["#{c.numero_inscricao} - #{c.nome}", c.id] }, { :prompt => 'Escolha o cliente' } %>
   </div>
   <div class="field">
     <%= f.label :data_vencimento %><br />
@@ -29,11 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :pacote_id %><br />
-    <%= f.number_field :pacote_id %>
-  </div>
-  <div class="field">
-    <%= f.label :valor %><br />
-    <%= f.text_field :valor %>
+    <%= f.select :pacote_id, @pacotes.collect { |c| ["#{c.nome} - R$#{c.valor}", c.id] }, { :prompt => 'Escolha o pacote' } %>
   </div>
   <div class="actions">
     <%= f.submit %>
