@@ -3,9 +3,8 @@
 <table>
   <tr>
     <th>Cliente</th>
-    <th>Nome</th>
-    <th>Numero inscricao</th>
-    <th>Data vencimento</th>
+    <th>Nº inscricao</th>
+    <th>vencimento</th>
     <th>Pacote</th>
     <th>Valor</th>
     <th></th>
@@ -15,12 +14,11 @@
 
 <% @faturas.each do |fatura| %>
   <tr>
-    <td><%= fatura.cliente_id %></td>
-    <td><%= fatura.nome %></td>
-    <td><%= fatura.numero_inscricao %></td>
+    <td><%= fatura.Cliente.nome %></td>
+    <td><%= fatura.Cliente.numero_inscricao %></td>
     <td><%= fatura.data_vencimento %></td>
-    <td><%= fatura.pacote_id %></td>
-    <td><%= fatura.valor %></td>
+    <td><%= fatura.Pacote.nome %></td>
+    <td><%= fatura.Pacote.valor %></td>
     <td><%= link_to 'Show', fatura %></td>
     <td><%= link_to 'Edit', edit_fatura_path(fatura) %></td>
     <td><%= link_to 'Destroy', fatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>

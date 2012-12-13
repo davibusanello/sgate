@@ -1,18 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Cliente:</b>
-  <%= @fatura.cliente_id %>
-</p>
-
-<p>
-  <b>Nome:</b>
-  <%= @fatura.nome %>
+  <b>Cliente Nome:</b>
+  <%= @fatura.Cliente.nome %>
 </p>
 
 <p>
   <b>Numero inscricao:</b>
-  <%= @fatura.numero_inscricao %>
+  <%= @fatura.Cliente.numero_inscricao %>
 </p>
 
 <p>
@@ -22,12 +17,12 @@
 
 <p>
   <b>Pacote:</b>
-  <%= @fatura.pacote_id %>
+  <%= @fatura.Pacote.nome %>
 </p>
 
 <p>
   <b>Valor:</b>
-  <%= @fatura.valor %>
+  <%= @fatura.Pacote.valor %>
 </p>
 
 

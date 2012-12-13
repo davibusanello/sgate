@@ -47,6 +47,9 @@ class FaturasController < ApplicationController
     @fatura = Fatura.new(params[:fatura])
     @clientes = Cliente.all
     @pacotes = Pacote.all
+    #@fatura.valor = Pacote.select(:valor).where(id: @fatura.pacote_id)
+    #@fatura.numero_inscricao = Cliente.select(:numero_inscricao).where(id: @fatura.cliente_id)
+    #@fatura.nome = Cliente.select(:nome).where(id: @fatura.cliente_id)
 
     respond_to do |format|
       if @fatura.save
