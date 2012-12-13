@@ -25,6 +25,8 @@ class FaturasController < ApplicationController
   # GET /faturas/new.json
   def new
     @fatura = Fatura.new
+    @clientes = Cliente.all
+    @pacotes = Pacote.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,12 +37,16 @@ class FaturasController < ApplicationController
   # GET /faturas/1/edit
   def edit
     @fatura = Fatura.find(params[:id])
+    @clientes = Cliente.all
+    @pacotes = Pacote.all
   end
 
   # POST /faturas
   # POST /faturas.json
   def create
     @fatura = Fatura.new(params[:fatura])
+    @clientes = Cliente.all
+    @pacotes = Pacote.all
 
     respond_to do |format|
       if @fatura.save
@@ -57,6 +63,8 @@ class FaturasController < ApplicationController
   # PUT /faturas/1.json
   def update
     @fatura = Fatura.find(params[:id])
+    @clientes = Cliente.all
+    @pacotes = Pacote.all
 
     respond_to do |format|
       if @fatura.update_attributes(params[:fatura])
