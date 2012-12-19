@@ -91,4 +91,14 @@ class FaturasController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def minhas_faturas
+    # @faturas = Fatura.select(:all).where(numero_inscricao: params[:numero_inscricao])
+
+    @faturas = Fatura.search_faturas(params[:inscricao])
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @faturas }
+    end
+  end
 end

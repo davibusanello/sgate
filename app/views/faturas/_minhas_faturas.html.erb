@@ -1,0 +1,29 @@
+<h1>Minhas Faturas</h1>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Nº inscricao</th>
+    <th>vencimento</th>
+    <th>Pacote</th>
+    <th>Valor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @faturas.each do |fatura| %>
+  <tr>
+    <td><%= fatura.Cliente.nome %></td>
+    <td><%= fatura.Cliente.numero_inscricao %></td>
+    <td><%= fatura.data_vencimento %></td>
+    <td><%= fatura.Pacote.nome %></td>
+    <td><%= fatura.Pacote.valor %></td>
+    <td><%= link_to 'Show', fatura %></td>
+    <td><%= link_to 'Edit', edit_fatura_path(fatura) %></td>
+    <td><%= link_to 'Destroy', fatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

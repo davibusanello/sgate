@@ -3,4 +3,11 @@ class Fatura < ActiveRecord::Base
 
   belongs_to :Cliente, :class_name => "Cliente", :foreign_key => "cliente_id"
   belongs_to :Pacote, :class_name => "Pacote", :foreign_key => "pacote_id"
+
+  def self.search_faturas(search)
+    if search
+      find(:all, :conditions => ['numero_inscricao LIKE ?',"%#{search}%"])
+      # select(:all).where(numero_inscricao: search)
+    end
+  end
 end

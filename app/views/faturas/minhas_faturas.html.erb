@@ -1,0 +1,13 @@
+<h1>Listar minhas faturas</h1>
+<%= form_tag({:crontroller => 'faturas', :action => 'minhas_faturas'}, :method => 'get', :id => 'search') do %>
+<div class="field">
+    <%= label_tag :numero_inscricao %><br />
+    <%= text_field_tag :inscricao, params[:inscricao], :id => 'inscricao', :size => 30, :placeholder => 'Escreva seu nº de inscricao' %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Pesquisar minhas faturas", :name => nil %>
+  </div>
+<% end %>
+<h2>Minhas Faturas</h2>
+
+<%= render partial: 'minhas_faturas' unless @faturas.nil? %>

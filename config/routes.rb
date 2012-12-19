@@ -20,6 +20,7 @@ Sgate::Application.routes.draw do
 
   resources :agendas
   match 'chamados' => 'agendas#lista_tecnico'
+  match 'minhas_faturas' => 'faturas#minhas_faturas'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
